@@ -1,0 +1,211 @@
+$box-color: #92CD00;
+$gear-color: #BCAD7B;
+$gear-stroke: #B5303C;
+$box-stroke: #314B53;
+$box-outline: #314B53;
+$body-color: #E5E4D7;
+$logo-text: #314B53;
+$accent-color: #B5303C;
+
+@-webkit-keyframes rotate-right {
+        from { 
+          -webkit-transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      
+      @-webkit-keyframes rotate-left {
+        from { 
+          -webkit-transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(-360deg);
+        }
+      }
+
+      @function getSpeed($speed) {
+        $secs: 360;
+        @if $speed == fastest {
+          $secs: 15;
+        } @else if $speed == really-fast {
+          $secs: 30;
+        } @else if $speed == fast {
+          $secs: 60;
+        } @else if $speed == slow {
+          $secs: 120;
+        } @else if $speed == really-slow {
+          $secs: 240;
+        } @else if $speed == slowest {
+          $secs: 360;
+        }
+        @return #{$secs}s;
+      }
+      
+      @mixin _rotate-animation($direction, $speed) {
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-animation: rotate-#{$direction} getSpeed($speed) linear 0s infinite;
+      }
+    
+      @mixin rotate($x, $y, $direction: left, $speed: slow) {
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-transform-origin: $x $y;
+        @include _rotate-animation($direction, $speed);
+      }
+      
+body {
+        background-color: $body-color;
+}
+#logo {
+        // width: 600px;
+        overflow: visible;
+}
+
+#gear_m1 {
+        @include rotate(62px, 177px, right, fast);
+}
+
+#gear_m1_shadow {
+        @include rotate(66px, 180px, right, fast);
+}
+
+#gear_m2 {
+        @include rotate(161px, 146px, left, fast);
+}
+
+#gear_m2_shadow {
+        @include rotate(165px, 150px, left, fast);
+}
+
+#gear_small {
+        @include rotate(62px, 26px, left, fastest);
+}
+
+#gear_small_shadow {
+        @include rotate(64px, 28px, left, fastest);
+}
+
+#gear_big {
+        @include rotate(233px, 102px, right, slow);
+}
+
+#gear_big_shadow {
+        @include rotate(239px, 107px, right, slow);
+}
+
+.cls-1 {
+        mask: url(#mask);
+}
+
+.cls-2,
+.cls-3 {
+        fill: $gear-color;
+}
+
+.cls-3,
+.cls-7 {
+        stroke: $gear-stroke;
+}
+
+.cls-10,
+.cls-14,
+.cls-15,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-9 {
+        stroke-miterlimit: 10;
+}
+
+.cls-14,
+.cls-3,
+.cls-7 {
+        stroke-width: 0.25px;
+}
+
+.cls-10,
+.cls-15,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-9 {
+        fill: none;
+}
+
+.cls-10,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-9 {
+        stroke: #fff;
+}
+
+.cls-4 {
+        stroke-width: 4px;
+}
+
+.cls-5 {
+        stroke-width: 3px;
+}
+
+.cls-15,
+.cls-6 {
+        stroke-width: 2px;
+}
+
+.cls-8 {
+        mask: url(#mask-2);
+}
+
+.cls-10 {
+        stroke-width: 0.5px;
+}
+
+.cls-11 {
+        mask: url(#mask-3);
+}
+
+.cls-12 {
+        mask: url(#mask-4);
+}
+
+.cls-13 {
+        mask: url(#mask-5);
+}
+
+.cls-14 {
+        fill: $box-color;
+        stroke: $box-outline;
+}
+
+.cls-15 {
+        stroke: $box-stroke;
+}
+
+.cls-16 {
+        filter: url(#luminosity-noclip-5);
+}
+
+.cls-17 {
+        filter: url(#luminosity-noclip-4);
+}
+
+.cls-18 {
+        filter: url(#luminosity-noclip-3);
+}
+
+.cls-19 {
+        filter: url(#luminosity-noclip-2);
+}
+
+.cls-20 {
+        filter: url(#luminosity-noclip);
+}
+
+.logo-text {
+        fill: $logo-text;
+}
