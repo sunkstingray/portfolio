@@ -23,6 +23,16 @@ body {
 #logo {
   overflow: visible;
   margin: 3rem 2rem 2rem 2rem;
+  max-width: 400px;
+}
+
+.icons {
+  text-align: center;
+}
+
+.social {
+  margin: 1rem;
+  width: 40px;
 }
 
 #gear_m1 {
