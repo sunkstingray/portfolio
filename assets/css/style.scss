@@ -59,7 +59,7 @@ body {
 }
 #logo {
         overflow: visible;
-        margin: 3rem 2rem 2rem 2rem;
+        margin: 2rem 1rem 1rem 1rem;
         max-width: 400px;
 }
 
@@ -70,6 +70,11 @@ body {
 .social {
         margin: 1rem;
         width: 40px;
+        color: $logo-text;
+}
+
+.btn-primary {
+        background-color: $accent-color;
 }
 
 #gear_m1 {
