@@ -3,3 +3,8 @@
  
 // Swipe functions for Bootstrap Carousel
 $('.carousel').bcSwipe({ threshold: 50 });
+
+$('#info').click(function(){
+        $('#info-modal').modal();
+    });
+

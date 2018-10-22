@@ -64,6 +64,10 @@ body {
         max-width: 400px;
 }
 
+#info :hover{
+        cursor: pointer;
+}
+
 .icons {
         text-align: center;
 }
@@ -224,4 +228,13 @@ body {
 
 .logo-text {
         fill: $logo-text;
+}
+
+.cls-circle {
+        fill: $accent-color;
+        stroke: none;
+}
+
+#i {
+        fill: $body-color;
 }

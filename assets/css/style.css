@@ -27,6 +27,10 @@ body {
   max-width: 400px;
 }
 
+#info :hover {
+  cursor: pointer;
+}
+
 .icons {
   text-align: center;
 }
@@ -221,5 +225,14 @@ body {
 
 .logo-text {
   fill: #314B53;
+}
+
+.cls-circle {
+  fill: #B5303C;
+  stroke: none;
+}
+
+#i {
+  fill: #E5E4D7;
 }
 /*# sourceMappingURL=style.css.map */
