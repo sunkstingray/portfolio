@@ -235,4 +235,8 @@ body {
 #i {
   fill: #E5E4D7;
 }
+
+.carousel-item img {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */

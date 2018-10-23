@@ -238,3 +238,7 @@ body {
 #i {
         fill: $body-color;
 }
+
+.carousel-item img {
+        cursor: pointer;
+}
